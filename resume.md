@@ -6,7 +6,7 @@ Phone: +91 81474 57210 | email: kiran_thilak@outlook.com | www.linkedin.com/in/k
 Software Engineer with 8+ years of experience across gaming, traffic & transport, retail, and industrial automation domains. Proficient in C, C++, and Golang, with a strong track record in legacy code analysis, crash dump debugging, hardware-software integration, and automation testing frameworks. Experienced working at companies like Ubisoft and UST on large-scale systems — from AAA game pipelines to real-time traffic management platforms. A self-driven team player who adapts quickly to new technologies and delivers reliable, maintainable solutions.
 
 ----
-### Work Expirence:
+### Work Experience:
 
 **Software Engineer**  
 _June 2024 - Present_  
@@ -32,12 +32,12 @@ Thiruvananthapuram, India
 ### Tools/Software Skills
 
 Languages: C, C++, Golang, C++11, C++17
-Source Control: Git-SCM, Perforce, SVN, Mirosoft TFS, Visual SourceSafe.
-Database and tools: Git, GDB, Unity, Linux, Windows, Perforce, Microsoft TFS, WinDbg, MySQL, MS-SQL
+Source Control: Git-SCM, Perforce, SVN, Microsoft TFS, Visual SourceSafe.
+Database and Tools: GDB, Unity, Linux, Windows, WinDbg, MySQL, MS-SQL
 
 ---
 ### Education
-B-tech In Computer Science and Engineering  71.4%  Aug 2017
+B.Tech in Computer Science and Engineering  71.4%  Aug 2017
 Alliance University, Bangalore, Karnataka, India 
 
 ---
@@ -48,7 +48,7 @@ Alliance University, Bangalore, Karnataka, India
 - Debugging and crash analysis. 
 - Large legacy code analysis. 
 - Experience in creating MySQL and MSSQL stored procedures. 
-- Hands-on experience in Automated Unit Testing and Test driver development (TDD). 
+- Hands-on experience in automated unit testing and test-driven development (TDD). 
 - Recognized as a quick learner with a knack for problem-solving, adapting swiftly to new technologies and challenges. 
 - Self-driven and capable of working with minimal supervision. 
 - Supportive and creative team player fostering collaboration and innovation within project teams.
@@ -60,87 +60,83 @@ Project Name : Keele
 Industry : Retail 
 Company : UST  
 Responsibilities:   
-- Developemnt and Maintence of new Point of sales backend in C and Golang.
-- Debug on large monolith legacy event based legacy code.
-- Serigate the old code into microservie layer if applicaple. 
-- Design digrams and new flows for new client requirenments.
+- Development and maintenance of a new Point of Sale backend in C and Golang.
+- Debugged a large monolithic event-based legacy code base.
+- Segregated old code into a microservice layer where applicable. 
+- Designed diagrams and new flows for new client requirements.
 
-Project Name : xdefiant 
+Project Name : XDefiant 
 Industry : Gaming 
 Company : Ubisoft  
 Responsibilities:   
-- Enhancement and maintance of game hooks for autmation testing.
-- Integreate inhouse tools to automation framework.
-- Resolve issue with daily test exution. 
-- Mentor Junior resouces in writting clean code.
+- Enhancement and maintenance of game hooks for automation testing.
+- Integrated in-house tools into the automation framework.
+- Resolved issues with daily test execution. 
+- Mentored junior resources in writing clean code.
 
 
-Project Name : Assasin Creed Unity  
+Project Name : Assassin's Creed Unity  
 Industry : Gaming 
 Company : Ubisoft  
 Responsibilities:   
-- Do analysis of large game code and write hooks for automation testing.
-- Work and debug on Oculus VR device, for integration and exection of automated test.
-- Integreate inhouse tools to automation framework.
-- Build and manange automated test exeuction script.
+- Analyzed large game code and wrote hooks for automation testing.
+- Worked and debugged on Oculus VR device for integration and execution of automated tests.
+- Integrated in-house tools into the automation framework.
+- Built and managed automated test execution scripts.
 - Served as the primary technical contact for DevOps and production teams.
 
 
 Project Name : ZAS WGT 200  
-Industry : Equipment automation  
+Industry : Equipment Automation  
 Company : QuEST Global  
 Responsibilities:   
-- Development and Maintenance of C++ and managed C++ DLL. 
-- Write clean and maintainable modern C++ code. 
-- Write google mock and google test for developing and existing modules. 
-- Worked on Serial port and Modbus communication. 
-- Perform hardware integration on client locations and run test cases. 
-- Use source control frame works such as GIT and SVN. 
+- Development and maintenance of C++ and managed C++ DLLs. 
+- Wrote clean and maintainable modern C++ code. 
+- Wrote Google Mock and Google Test unit tests for new and existing modules. 
+- Worked on serial port and Modbus communication. 
+- Performed hardware integration at client locations and executed test cases. 
+- Used source control frameworks such as Git and SVN. 
    
 Project Name : Amsterdam Travel Time System  
 Industry : Traffic and Transport  
 Company : ARS Traffic and Transport Technology  
 Responsibilities:   
 - Development of Windows ATL Services. 
-- Created load balanced and fail-safe services to Match License plate and Generate Data for the 
-system. 
-- Worked on the systems watchdog feature to alert on failures using Microsoft Windows 
-Management Instrumentation. 
+- Created load-balanced and fail-safe services to match license plates and generate data for the system. 
+- Worked on the system's watchdog feature to alert on failures using Microsoft Windows Management Instrumentation. 
 - Wrote MSSQL stored procedures. 
 - Used Microsoft TFS for source code management. 
-- Creation of stubs to simulate the process. 
+- Created stubs to simulate the process. 
    
 Project Name : National Data Warehouse for Traffic Information (NDW)  
 Industry : Traffic and Transport  
 Company : ARS Traffic and Transport Technology  
 Responsibilities:   
 - Maintained 15+ services. 
-- Perform root cause analysis and fix the issues marked by support team. 
-- Worked on new firmware for Loop Detection System and its automated installer. 
-- Integration of new requirements with-in the project 
-- Worked on integration of PimeVision Analog Number Plate recognizer. 
-- Development of automation tools to be used within the team. 
+- Performed root cause analysis and fixed issues reported by the support team. 
+- Worked on new firmware for the Loop Detection System and its automated installer. 
+- Integrated new requirements within the project. 
+- Worked on integration of PrimeVision Analog Number Plate Recognizer. 
+- Developed automation tools for use within the team. 
    
 Project Name : Surat Smart City Integrated Traffic Control System  
 Industry : Traffic and Transport  
 Company : ARS Traffic and Transport Technology  
 Responsibilities:   
-- Managed all the C++ services in the project. 
-- Performed integration of system with speed control sign boards. 
-- Perform crash dump analysis and impact analysis on system. 
+- Managed all C++ services in the project. 
+- Performed integration of the system with speed control signboards. 
+- Performed crash dump analysis and impact analysis on the system. 
 - Created MFC stubs for the testing team. 
-- Tracked and fixing of issue in SPIRA. 
-- Integrated the system with Uncanny vision ANPR. 
+- Tracked and fixed issues in SPIRA. 
+- Integrated the system with Uncanny Vision ANPR. 
    
-Project Name : ESDAL & MINT (Electronic Service Delivery for 
-Abnormal Loads) 
- 
+Project Name : ESDAL & MINT (Electronic Service Delivery for Abnormal Loads) 
 Industry : Traffic and Transport  
 Company : ARS Traffic and Transport Technology  
 Responsibilities:   
-- Worked on Driver instruction Service in creating routes for driver. 
-- Exposure installing new version of oracle database in staging servers. 
-- Performed Crash dump analysis with Windbg and solved memory issues in the system. 
-- Performed code walkthrough to find and fix potential issues. 
-- Worked closely with the client for issue fix and close Redmine tickets. 
-- Added Unit tests to the project for easy debugging 
+- Worked on the Driver Instruction Service to create routes for drivers. 
+- Gained exposure installing a new version of Oracle Database on staging servers. 
+- Performed crash dump analysis with WinDbg and resolved memory issues in the system. 
+- Performed code walkthroughs to find and fix potential issues. 
+- Worked closely with the client to fix issues and close Redmine tickets. 
+- Added unit tests to the project for easier debugging.
