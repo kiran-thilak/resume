@@ -3,6 +3,8 @@ Phone: +91 81474 57210 | email: kiran_thilak@outlook.com | www.linkedin.com/in/k
 
 ### Summary:
 
+Software Engineer with 8+ years of experience across gaming, traffic & transport, retail, and industrial automation domains. Proficient in C, C++, and Golang, with a strong track record in legacy code analysis, crash dump debugging, hardware-software integration, and automation testing frameworks. Experienced working at companies like Ubisoft and UST on large-scale systems — from AAA game pipelines to real-time traffic management platforms. A self-driven team player who adapts quickly to new technologies and delivers reliable, maintainable solutions.
+
 ----
 ### Work Expirence:
 
