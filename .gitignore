@@ -6,8 +6,9 @@ node_modules/
 dist/*
 !dist/kiran_thilak_resume.pdf
 
-# Build output (regenerate with `npm run css:build`)
-public/assets/tailwind.css
+# Build output (regenerate with `npm run css:build`) — committed because
+# Hostinger's Passenger layer serves public/assets/* directly from disk,
+# bypassing the app (and its build step) entirely when a file is missing.
 
 # Logs
 npm-debug.log*

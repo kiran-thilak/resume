@@ -11,7 +11,7 @@ text layer so applicant tracking systems can parse it.
 ├── public/
 │   ├── index.html           # landing page
 │   └── assets/
-│       └── tailwind.css     # built by Vite (gitignored)
+│       └── tailwind.css     # built by Vite, committed (see "Deploying" below)
 ├── src/
 │   ├── server.js            # dev server + routes
 │   ├── render.js            # markdown -> printable HTML
@@ -90,3 +90,15 @@ git commit -m "Update resume PDF"
 the PDF is stale (its mtime check isn't reliable right after a fresh
 checkout), but it falls back to serving the committed file if Chrome isn't
 present rather than erroring.
+
+`public/assets/tailwind.css` is committed for the same reason: Hostinger's
+Node.js app hosting (Phusion Passenger) serves files under `public/` directly
+from disk, bypassing the app entirely — a missing file 404s before the build
+step or the app's own `/assets/` route ever get a chance to run. Whenever
+`src/styles/` changes, rebuild and commit the CSS yourself before pushing:
+
+```
+npm run css:build
+git add public/assets/tailwind.css
+git commit -m "Update built CSS"
+```
