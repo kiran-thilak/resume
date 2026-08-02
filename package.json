@@ -4,13 +4,21 @@
   "description": "Markdown-driven resume site with an ATS-safe PDF build",
   "main": "src/server.js",
   "scripts": {
-    "dev": "node src/server.js",
+    "dev": "concurrently -k -n server,css \"node src/server.js\" \"npm run css:watch\"",
     "start": "node src/server.js",
+    "css:build": "tailwindcss -c tailwind.config.js -i src/styles/tailwind-input.css -o public/assets/tailwind.css --minify",
+    "css:watch": "tailwindcss -c tailwind.config.js -i src/styles/tailwind-input.css -o public/assets/tailwind.css --watch",
     "pdf": "node src/pdf/generate.js",
     "pdf:check": "node scripts/check-pdf.js",
-    "build": "npm run pdf && npm run pdf:check"
+    "build": "npm run css:build && npm run pdf && npm run pdf:check"
   },
   "dependencies": {
     "marked": "^13.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "concurrently": "^10.0.4",
+    "tailwindcss": "^3.4.19"
   }
 }

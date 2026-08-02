@@ -13,11 +13,22 @@ const http = require('http');
 const fs = require('fs');
 const { renderResume, pdfStatus } = require('./render');
 const { generatePdf } = require('./pdf/generate');
+const path = require('path');
 const {
-  MD_FILE, LANDING_FILE, CSS_FILE, PDF_FILE, PDF_DOWNLOAD_NAME,
+  MD_FILE, LANDING_FILE, CSS_FILE, PDF_FILE, PDF_DOWNLOAD_NAME, TAILWIND_OUTPUT_FILE,
 } = require('./paths');
 
 const PORT = process.env.PORT || 3000;
+const ASSETS_DIR = path.join(path.dirname(LANDING_FILE), 'assets');
+
+const CONTENT_TYPES = {
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.ico': 'image/x-icon',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.css': 'text/css',
+};
 
 const LIVE_RELOAD_SCRIPT = `
 <script>
@@ -137,6 +148,19 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (pathname.startsWith('/assets/')) {
+      const filePath = path.join(ASSETS_DIR, pathname.slice('/assets/'.length));
+      if (!filePath.startsWith(ASSETS_DIR) || !fs.existsSync(filePath)) {
+        res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end('<p style="font-family:sans-serif">404 — Not found. <a href="/">Go home</a></p>');
+        return;
+      }
+      const type = CONTENT_TYPES[path.extname(filePath)] || 'application/octet-stream';
+      res.writeHead(200, { 'Content-Type': type });
+      fs.createReadStream(filePath).pipe(res);
+      return;
+    }
+
     if (pathname === '/resume.md') {
       res.writeHead(200, { 'Content-Type': 'text/markdown; charset=utf-8' });
       res.end(fs.readFileSync(MD_FILE, 'utf8'));
@@ -155,6 +179,16 @@ const server = http.createServer((req, res) => {
 fs.watch(MD_FILE, () => notifyReload('content/resume.md'));
 fs.watch(LANDING_FILE, () => notifyReload('public/index.html'));
 fs.watch(CSS_FILE, () => notifyReload('src/styles/resume.css'));
+
+// Tailwind CLI (css:watch) may not have written its first build yet when the
+// server starts, so wait for the file to exist before watching it.
+(function watchTailwindOutput() {
+  if (fs.existsSync(TAILWIND_OUTPUT_FILE)) {
+    fs.watch(TAILWIND_OUTPUT_FILE, () => notifyReload('public/assets/tailwind.css'));
+  } else {
+    setTimeout(watchTailwindOutput, 500);
+  }
+})();
 
 server.listen(PORT, () => {
   console.log(`Landing page → http://localhost:${PORT}`);

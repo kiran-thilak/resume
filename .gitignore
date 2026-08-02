@@ -4,6 +4,9 @@ node_modules/
 # Build output (regenerate with `npm run pdf`)
 dist/
 
+# Build output (regenerate with `npm run css:build`)
+public/assets/tailwind.css
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

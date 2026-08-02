@@ -11,6 +11,8 @@ module.exports = {
   MD_FILE: path.join(ROOT, 'content', 'resume.md'),
   LANDING_FILE: path.join(ROOT, 'public', 'index.html'),
   CSS_FILE: path.join(ROOT, 'src', 'styles', 'resume.css'),
+  TAILWIND_INPUT_FILE: path.join(ROOT, 'src', 'styles', 'tailwind-input.css'),
+  TAILWIND_OUTPUT_FILE: path.join(ROOT, 'public', 'assets', 'tailwind.css'),
   // Build output — generated, not committed
   DIST_DIR: path.join(ROOT, 'dist'),
   PDF_FILE: path.join(ROOT, 'dist', 'kiran_thilak_resume.pdf'),
