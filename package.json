@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "npm run css:build && concurrently -k -n server,css \"node src/server.js\" \"npm run css:watch\"",
-    "start": "node src/server.js",
+    "start": "npm run build && node src/server.js",
     "css:build": "vite build",
     "css:watch": "vite build --watch",
     "pdf": "node src/pdf/generate.js",
