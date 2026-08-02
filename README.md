@@ -9,29 +9,45 @@ text layer so applicant tracking systems can parse it.
 ├── content/
 │   └── resume.md            # the resume — the only file with actual content
 ├── public/
-│   └── index.html           # landing page (Tailwind via CDN)
+│   ├── index.html           # landing page
+│   └── assets/
+│       └── tailwind.css     # built by Vite (gitignored)
 ├── src/
 │   ├── server.js            # dev server + routes
 │   ├── render.js            # markdown -> printable HTML
 │   ├── paths.js             # every filesystem path in one place
 │   ├── styles/
-│   │   └── resume.css       # resume + print stylesheet
+│   │   ├── resume.css       # resume + print stylesheet
+│   │   └── tailwind-input.css # Tailwind entry, processed by Vite
 │   └── pdf/
 │       └── generate.js      # headless-Chrome PDF build
 ├── scripts/
 │   └── check-pdf.js         # verifies the PDF's text layer is extractable
+├── vite.config.js           # builds tailwind-input.css -> public/assets/tailwind.css
 └── dist/                    # build output (gitignored)
     └── kiran_thilak_resume.pdf
 ```
+
+## Getting started
+
+```
+npm install       # one-time setup
+npm run dev       # start the site at http://localhost:3000
+```
+
+Press `Ctrl+C` in the terminal to stop it — that kills both the server and the
+Tailwind/Vite watcher `npm run dev` starts alongside it.
 
 ## Commands
 
 | Command | What it does |
 | --- | --- |
-| `npm run dev` | Serves the site on http://localhost:3000 |
+| `npm run dev` | Serves the site on http://localhost:3000 and rebuilds CSS on change |
+| `npm run css:build` | Builds `public/assets/tailwind.css` once via Vite |
+| `npm run css:watch` | Same, but rebuilds on every save |
 | `npm run pdf` | Renders `content/resume.md` to `dist/kiran_thilak_resume.pdf` |
 | `npm run pdf:check` | Extracts the PDF's text to prove it is ATS-readable |
-| `npm run build` | Both of the above |
+| `npm run build` | CSS build, then both of the above |
 
 ## Routes
 
