@@ -4,7 +4,7 @@
   "description": "Markdown-driven resume site with an ATS-safe PDF build",
   "main": "src/server.js",
   "scripts": {
-    "dev": "concurrently -k -n server,css \"node src/server.js\" \"npm run css:watch\"",
+    "dev": "npm run css:build && concurrently -k -n server,css \"node src/server.js\" \"npm run css:watch\"",
     "start": "node src/server.js",
     "css:build": "vite build",
     "css:watch": "vite build --watch",
