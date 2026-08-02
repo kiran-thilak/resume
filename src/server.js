@@ -15,7 +15,7 @@ const { renderResume, pdfStatus } = require('./render');
 const { generatePdf } = require('./pdf/generate');
 const path = require('path');
 const {
-  MD_FILE, LANDING_FILE, CSS_FILE, PDF_FILE, PDF_DOWNLOAD_NAME, TAILWIND_OUTPUT_FILE,
+  MD_FILE, LANDING_FILE, CSS_FILE, PDF_FILE, PDF_DOWNLOAD_NAME, TAILWIND_OUTPUT_FILE, FAVICON_FILE,
 } = require('./paths');
 
 const PORT = process.env.PORT || 3000;
@@ -89,7 +89,14 @@ const server = http.createServer((req, res) => {
 
   try {
     if (pathname === '/' || pathname === '/index.html') {
+      // Inline the CSS and favicon rather than linking to /assets/* — hosts
+      // that serve public/ as static files ahead of the app (e.g. Hostinger's
+      // Passenger layer) 404 those requests before they ever reach Node.
+      const favicon = fs.readFileSync(FAVICON_FILE, 'utf8');
+      const faviconDataUri = `data:image/svg+xml;base64,${Buffer.from(favicon).toString('base64')}`;
       const landing = fs.readFileSync(LANDING_FILE, 'utf8')
+        .replace('<link rel="stylesheet" href="/assets/tailwind.css">', `<style>${fs.readFileSync(TAILWIND_OUTPUT_FILE, 'utf8')}</style>`)
+        .replace('<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2">', `<link rel="icon" type="image/svg+xml" href="${faviconDataUri}">`)
         .replace('</body>', `${LIVE_RELOAD_SCRIPT}</body>`);
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       res.end(landing);
