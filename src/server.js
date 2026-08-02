@@ -133,6 +133,14 @@ const server = http.createServer((req, res) => {
         generatePdf().then(
           () => servePdf(req, res),
           err => {
+            // No headless Chrome on this host (e.g. Hostinger): fall back to
+            // whatever PDF was committed rather than 500ing on every request —
+            // git checkout mtimes don't reliably reflect real staleness anyway.
+            if (fs.existsSync(PDF_FILE)) {
+              console.error('PDF generation failed, serving the existing file:', err.message);
+              servePdf(req, res);
+              return;
+            }
             console.error('PDF generation failed:', err.message);
             res.writeHead(500, { 'Content-Type': 'text/html; charset=utf-8' });
             res.end(

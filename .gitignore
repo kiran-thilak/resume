@@ -1,8 +1,10 @@
 # Dependencies
 node_modules/
 
-# Build output (regenerate with `npm run pdf`)
-dist/
+# Build output (regenerate with `npm run pdf`) — the PDF itself is committed
+# so hosts without a Chrome/Edge binary (e.g. Hostinger) can serve it as-is.
+dist/*
+!dist/kiran_thilak_resume.pdf
 
 # Build output (regenerate with `npm run css:build`)
 public/assets/tailwind.css

@@ -24,8 +24,8 @@ text layer so applicant tracking systems can parse it.
 ├── scripts/
 │   └── check-pdf.js         # verifies the PDF's text layer is extractable
 ├── vite.config.js           # builds tailwind-input.css -> public/assets/tailwind.css
-└── dist/                    # build output (gitignored)
-    └── kiran_thilak_resume.pdf
+└── dist/
+    └── kiran_thilak_resume.pdf  # committed — see "Deploying" below
 ```
 
 ## Getting started
@@ -47,7 +47,8 @@ Tailwind/Vite watcher `npm run dev` starts alongside it.
 | `npm run css:watch` | Same, but rebuilds on every save |
 | `npm run pdf` | Renders `content/resume.md` to `dist/kiran_thilak_resume.pdf` |
 | `npm run pdf:check` | Extracts the PDF's text to prove it is ATS-readable |
-| `npm run build` | CSS build, then both of the above |
+| `npm run build` | CSS build only — what runs on deploy |
+| `npm run build:pdf` | CSS build, then regenerates and verifies the PDF |
 
 ## Routes
 
@@ -68,3 +69,24 @@ Tailwind/Vite watcher `npm run dev` starts alongside it.
   that text extraction depends on; an image-based PDF looks identical but an ATS
   reads it as blank. `npm run pdf:check` is what catches that.
 - Set `CHROME_PATH` if Chrome/Edge is installed somewhere non-standard.
+
+## Deploying
+
+`dist/kiran_thilak_resume.pdf` is committed to the repo, because most hosts
+(Hostinger included) don't have a Chrome/Edge binary available at build time.
+`npm run build` — what runs on deploy — only builds the CSS; it does not
+regenerate the PDF.
+
+Whenever `content/resume.md` changes, regenerate and commit the PDF yourself
+before pushing:
+
+```
+npm run build:pdf
+git add dist/kiran_thilak_resume.pdf
+git commit -m "Update resume PDF"
+```
+
+`/resume.pdf` will still attempt to regenerate on demand if the server thinks
+the PDF is stale (its mtime check isn't reliable right after a fresh
+checkout), but it falls back to serving the committed file if Chrome isn't
+present rather than erroring.

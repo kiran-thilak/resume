@@ -10,7 +10,8 @@
     "css:watch": "vite build --watch",
     "pdf": "node src/pdf/generate.js",
     "pdf:check": "node scripts/check-pdf.js",
-    "build": "npm run css:build && npm run pdf && npm run pdf:check"
+    "build": "npm run css:build",
+    "build:pdf": "npm run css:build && npm run pdf && npm run pdf:check"
   },
   "dependencies": {
     "marked": "^13.0.0"
