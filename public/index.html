@@ -1,0 +1,415 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kiran Thilak | Software Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#ffb786",
+                        "outline": "#8c909f",
+                        "on-primary": "#002e6a",
+                        "on-surface-variant": "#c2c6d6",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "primary": "#adc6ff",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "on-error": "#690005",
+                        "inverse-primary": "#005ac2",
+                        "tertiary-container": "#df7412",
+                        "on-primary-fixed-variant": "#004395",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#d8e2ff",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-variant": "#353534",
+                        "surface-bright": "#393939",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-tertiary-fixed": "#311400",
+                        "outline-variant": "#424754",
+                        "on-secondary": "#2f3131",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#b4b5b5",
+                        "primary-container": "#4d8eff",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container": "#201f1f",
+                        "on-tertiary": "#502400",
+                        "secondary-container": "#454747",
+                        "surface-tint": "#adc6ff",
+                        "on-primary-fixed": "#001a42",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-primary-container": "#00285d",
+                        "secondary": "#c6c6c7",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-tertiary-container": "#461f00",
+                        "brand-electric": "#3B82F6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-padding-desktop": "120px",
+                        "unit": "8px",
+                        "section-padding-mobile": "64px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "code-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "300"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "code-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "300"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; }
+        .glass-card { background: rgba(30, 30, 30, 0.6); backdrop-filter: blur(12px); border: 1px solid #2A2A2A; }
+        .hover-accent:hover { border-color: #3B82F6; transition: all 0.3s ease; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3B82F6; }
+    </style>
+</head>
+<body class="selection:bg-brand-electric selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b border-outline-variant dark:border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="flex items-center gap-3 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-headline-md text-headline-md tracking-tighter text-on-surface dark:text-on-surface">KIRAN THILAK</span>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-label-caps text-label-caps">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#about">ABOUT</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#skills">SKILLS</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#experience">EXPERIENCE</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="/resume">RESUME</a>
+</nav>
+<button class="md:hidden material-symbols-outlined text-on-surface" id="menu-toggle" aria-label="Toggle navigation menu" aria-controls="mobile-nav" aria-expanded="false">menu</button>
+</div>
+<!-- Mobile nav -->
+<nav class="hidden md:hidden flex-col gap-1 px-gutter pb-6 border-t border-outline-variant bg-surface font-label-caps text-label-caps" id="mobile-nav">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors py-3" href="#about">ABOUT</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors py-3" href="#skills">SKILLS</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors py-3" href="#experience">EXPERIENCE</a>
+<a class="text-primary font-bold py-3" href="/resume">RESUME</a>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYisxtqWmhxzojGeeOoEVnmAgiR4Q4nf5PuEG9hP0YFXkOgld9TQVCEfjow4H5hkNFyOyU8SXXOyhcVeAT340-VpXW5kzJtzLnQQTsP0rALLf4y_ByvEDv4kZbLxBvqAjP_1ym-YYddP-8Y4wZkgdgFCuQKzZpB-Yxy1Bko8nCmw69xHQfiNH6C2TfInBJ_eeAQ6EM1qN1ceUNIrWmF7K6-FexC_FPqsriVB_-HClcRpzMkWjtICCC')"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface to-surface z-10"></div>
+<div class="relative z-20 max-w-container-max mx-auto px-gutter text-center">
+<div class="inline-block px-4 py-1.5 mb-6 border border-outline-variant rounded-full bg-surface-container-low/50 backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Software Engineer</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg mb-6 tracking-tighter leading-tight">
+                    Kiran Thilak
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    Building and scaling <span class="text-on-surface font-semibold">high-performance systems</span> in C, C++, and Go. Focused on architectural integrity and technical mastery.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="inline-flex items-center justify-center gap-2 bg-brand-electric hover:bg-blue-600 text-white px-10 py-4 font-label-caps text-label-caps tracking-widest transition-all active:scale-95 shadow-lg shadow-brand-electric/20 rounded-lg" href="/resume">
+<span class="material-symbols-outlined text-base">visibility</span>
+                        VIEW RESUME
+                    </a>
+<a class="inline-flex items-center justify-center gap-2 border border-outline-variant hover:border-on-surface text-on-surface px-10 py-4 font-label-caps text-label-caps tracking-widest transition-all active:scale-95 rounded-lg" href="/resume.pdf" download>
+<span class="material-symbols-outlined text-base">download</span>
+                        DOWNLOAD RESUME
+                    </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+<span class="material-symbols-outlined text-on-surface-variant">arrow_downward</span>
+</div>
+</section>
+<!-- Professional Summary -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface" id="about">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 transition-all duration-700 ease-out opacity-100">
+<h2 class="font-label-caps text-label-caps text-primary mb-4 tracking-[0.2em]">PROFESSIONAL SUMMARY</h2>
+<p class="font-display-lg-mobile text-display-lg-mobile md:text-[48px] md:leading-[1.1] mb-8 font-bold text-on-surface">
+                            8+ years of expertise in high-throughput backend architecture.
+                        </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            A senior engineering specialist with a track record of modernizing legacy monolithic systems, leading automation test infrastructure for AAA titles, and building robust systems across gaming, retail, and industrial automation domains.
+                        </p>
+</div>
+<div class="md:col-span-5 flex justify-center md:justify-end transition-all duration-700 ease-out opacity-100">
+<div class="relative w-64 h-64 md:w-80 md:h-80 border border-outline-variant p-4 hover-accent transition-all group">
+<div class="absolute inset-0 border border-brand-electric/0 group-hover:border-brand-electric/50 -m-2 transition-all"></div>
+<div class="w-full h-full bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" alt="Kiran Thilak Professional Portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2mVyKAJrHYdKxSUaWhZX0Li06JLSabP7YQugBPhG0PPmnTczAIowjRxm7PR7UNEQx_Kw1imoePdUA_6nm_65_xCywmo4rexMduUbz6ENJD6APupDLt1sVFPQoqGYWIIDRodNF5BWqZ0bHxgLh8NFUxOuGpBBN46iBNMXABpcBp6rlixj18zI6KV9cjZ7UA4aus2twKU-b0_QeAMn0d7H3WoZqw2VWNDJCPKOSdEjjphMgYQIgEZ-YjqLVdi-GB1GAAQ">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-lowest relative overflow-hidden" id="skills">
+<!-- Background Decorative Elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-brand-electric/5 blur-[120px] rounded-full"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-label-caps text-label-caps text-primary mb-4 tracking-[0.2em]">TECHNICAL ARSENAL</h2>
+<h3 class="font-headline-md text-headline-md text-on-surface">Core Competencies</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Skill Card 1 -->
+<div class="p-8 glass-card hover-accent group transition-all duration-700 ease-out opacity-100">
+<div class="w-12 h-12 mb-6 flex items-center justify-center bg-surface-container-highest group-hover:bg-brand-electric/10 transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-brand-electric transition-colors">memory</span>
+</div>
+<h4 class="font-headline-md text-[20px] mb-2 text-on-surface">C / C++11/17</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Expertise in low-level memory management, multithreading, and performance optimization.</p>
+</div>
+<!-- Skill Card 2 -->
+<div class="p-8 glass-card hover-accent group transition-all duration-700 ease-out opacity-100">
+<div class="w-12 h-12 mb-6 flex items-center justify-center bg-surface-container-highest group-hover:bg-brand-electric/10 transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-brand-electric transition-colors">bolt</span>
+</div>
+<h4 class="font-headline-md text-[20px] mb-2 text-on-surface">Go (Golang)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Building concurrent, high-throughput microservices and distributed systems with high reliability.</p>
+</div>
+<!-- Skill Card 3 -->
+<div class="p-8 glass-card hover-accent group transition-all duration-700 ease-out opacity-100">
+<div class="w-12 h-12 mb-6 flex items-center justify-center bg-surface-container-highest group-hover:bg-brand-electric/10 transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-brand-electric transition-colors">hub</span>
+</div>
+<h4 class="font-headline-md text-[20px] mb-2 text-on-surface">Microservices</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Designing scalable architectures and migrating complex monoliths to modular services.</p>
+</div>
+<!-- Skill Card 4 -->
+<div class="p-8 glass-card hover-accent group transition-all duration-700 ease-out opacity-100">
+<div class="w-12 h-12 mb-6 flex items-center justify-center bg-surface-container-highest group-hover:bg-brand-electric/10 transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-brand-electric transition-colors">history_edu</span>
+</div>
+<h4 class="font-headline-md text-[20px] mb-2 text-on-surface">Legacy Modernization</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Refactoring and upgrading mission-critical codebases for modern cloud environments.</p>
+</div>
+<!-- Skill Card 5 -->
+<div class="p-8 glass-card hover-accent group transition-all duration-700 ease-out opacity-100">
+<div class="w-12 h-12 mb-6 flex items-center justify-center bg-surface-container-highest group-hover:bg-brand-electric/10 transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-brand-electric transition-colors">biotech</span>
+</div>
+<h4 class="font-headline-md text-[20px] mb-2 text-on-surface">QA Automation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Advanced test infrastructure using GTest, GMock and custom pipeline diagnostics.</p>
+</div>
+<!-- Skill Card 6 -->
+<div class="p-8 glass-card hover-accent group transition-all duration-700 ease-out opacity-100">
+<div class="w-12 h-12 mb-6 flex items-center justify-center bg-surface-container-highest group-hover:bg-brand-electric/10 transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-brand-electric transition-colors">bug_report</span>
+</div>
+<h4 class="font-headline-md text-[20px] mb-2 text-on-surface">Diagnostics</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Deep debugging across distributed systems using profiling tools and stack analysis.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Highlights -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface" id="experience">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="font-label-caps text-label-caps text-primary mb-4 tracking-[0.2em]">CAREER TRAJECTORY</h2>
+<h3 class="font-headline-md text-headline-md text-on-surface">Professional Experience</h3>
+</div>
+<div class="hidden md:block h-[1px] flex-grow mx-12 bg-outline-variant mb-4"></div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">8+ YEARS TOTAL</p>
+</div>
+<div class="space-y-12">
+<!-- Exp 1 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+<div class="md:col-span-3 transition-all duration-700 ease-out opacity-100">
+<p class="font-code-sm text-code-sm text-brand-electric mb-2">CURRENT</p>
+<h4 class="font-headline-md text-[20px] text-on-surface">Software Engineer</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">@ UST</p>
+</div>
+<div class="md:col-span-9 border-l border-outline-variant pl-8 relative transition-all duration-700 ease-out opacity-100">
+<div class="absolute -left-[5px] top-2 w-2 h-2 bg-brand-electric rounded-full"></div>
+<p class="font-body-lg text-body-lg text-on-surface mb-4">
+                                Leading the transition of retail Point-of-Sale (POS) monolithic applications into high-performance microservices.
+                            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">C / C++</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">GO</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">MICROSERVICES</span>
+</div>
+</div>
+</div>
+<!-- Exp 2 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+<div class="md:col-span-3 transition-all duration-700 ease-out opacity-100">
+<p class="font-code-sm text-code-sm text-on-surface-variant mb-2">PREVIOUS</p>
+<h4 class="font-headline-md text-[20px] text-on-surface">R&amp;D Engineer</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">@ Ubisoft</p>
+</div>
+<div class="md:col-span-9 border-l border-outline-variant pl-8 relative transition-all duration-700 ease-out opacity-100">
+<div class="absolute -left-[5px] top-2 w-2 h-2 bg-outline-variant group-hover:bg-brand-electric transition-colors rounded-full"></div>
+<p class="font-body-lg text-body-lg text-on-surface mb-4">
+                                Architected automation test pipelines for major AAA titles including XDefiant and Assassin's Creed Unity, ensuring rapid deployment cycles and game stability.
+                            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">C++17</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">PYTHON</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">CI/CD</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">GTEST</span>
+</div>
+</div>
+</div>
+<!-- Exp 3 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+<div class="md:col-span-3 transition-all duration-700 ease-out opacity-100">
+<p class="font-code-sm text-code-sm text-on-surface-variant mb-2">EARLY CAREER</p>
+<h4 class="font-headline-md text-[20px] text-on-surface">Software Engineer</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">@ Quest Global &amp; ARS</p>
+</div>
+<div class="md:col-span-9 border-l border-outline-variant pl-8 relative transition-all duration-700 ease-out opacity-100">
+<div class="absolute -left-[5px] top-2 w-2 h-2 bg-outline-variant group-hover:bg-brand-electric transition-colors rounded-full"></div>
+<p class="font-body-lg text-body-lg text-on-surface mb-4">
+                                Engineered real-time C++ systems for industrial heavy equipment and intelligent live traffic management solutions.
+                            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">C++</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">EMBEDDED</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant">LINUX</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<a class="inline-flex items-center gap-2 text-brand-electric hover:gap-4 transition-all font-label-caps text-label-caps tracking-widest" href="/resume">
+                        VIEW FULL RESUME
+                        <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface border-t border-outline-variant dark:border-outline-variant w-full py-section-padding-mobile md:py-section-padding-desktop">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<span class="font-label-caps text-label-caps text-on-surface mb-2">KIRAN THILAK</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-6">
+                    Professional Software Engineer dedicated to performance, scalability, and code elegance.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="mailto:kiran_thilak@outlook.com">
+<span class="material-symbols-outlined text-sm">mail</span>
+<span class="font-code-sm text-code-sm">kiran_thilak@outlook.com</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="tel:+918147457210">
+<span class="material-symbols-outlined text-sm">call</span>
+<span class="font-code-sm text-code-sm">+918147457210</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center gap-6">
+<div class="flex gap-8 font-label-caps text-label-caps">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="https://linkedin.com/in/kiranthilak" rel="noopener" target="_blank">LINKEDIN</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:kiran_thilak@outlook.com">EMAIL</a>
+</div>
+<a class="inline-flex items-center gap-2 border border-brand-electric text-brand-electric hover:bg-brand-electric hover:text-white px-8 py-3 font-label-caps text-label-caps tracking-widest transition-all rounded-lg" href="/resume">
+<span class="material-symbols-outlined text-base">description</span>
+                    VIEW FULL RESUME
+                </a>
+</div>
+<div class="text-center md:text-right">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-50 uppercase tracking-widest">
+                    © 2026 KIRAN THILAK. BUILT FOR PERFORMANCE.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Mobile menu — 'hidden' and 'flex' must always be set as a pair,
+        // otherwise the nav falls back to display:block and the links go inline.
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        function setMenu(open) {
+            mobileNav.classList.toggle('flex', open);
+            mobileNav.classList.toggle('hidden', !open);
+            menuToggle.textContent = open ? 'close' : 'menu';
+            menuToggle.setAttribute('aria-expanded', String(open));
+        }
+
+        setMenu(false);
+        // Currently hidden -> the click should open it
+        menuToggle.addEventListener('click', () => setMenu(mobileNav.classList.contains('hidden')));
+
+        // Close the menu if the viewport grows past the mobile breakpoint while it is open
+        window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+            if (e.matches) setMenu(false);
+        });
+
+        // Smooth scrolling for in-page nav links only
+        document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (!target) return;
+                e.preventDefault();
+                setMenu(false);
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('main .glass-card, main .grid > div').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

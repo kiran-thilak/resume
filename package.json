@@ -1,8 +1,14 @@
 {
   "name": "resume",
   "version": "1.0.0",
+  "description": "Markdown-driven resume site with an ATS-safe PDF build",
+  "main": "src/server.js",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "pdf": "node src/pdf/generate.js",
+    "pdf:check": "node scripts/check-pdf.js",
+    "build": "npm run pdf && npm run pdf:check"
   },
   "dependencies": {
     "marked": "^13.0.0"

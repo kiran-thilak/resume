@@ -1,6 +1,9 @@
 # Dependencies
 node_modules/
 
+# Build output (regenerate with `npm run pdf`)
+dist/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
