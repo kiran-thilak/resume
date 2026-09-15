@@ -23,7 +23,7 @@ Software Engineer with 8+ years of experience building and scaling high-performa
 ## Work Experience
 
 ### Software Engineer | UST
-_June 2024 – Present | Thiruvananthapuram, India_
+_Jun 2024 – Present | Thiruvananthapuram, India_
 **Project: Keele** _(Retail — Point of Sale)_
 
 - Developed and maintained a high-throughput Point of Sale backend in C and Go.
@@ -34,7 +34,7 @@ _June 2024 – Present | Thiruvananthapuram, India_
 ---
 
 ### R&D Engineer | Ubisoft
-_Feb 2022 – April 2024 | Pune, India_
+_Feb 2022 – May 2024 | Pune, India_
 **Projects: XDefiant, Assassin's Creed Unity** _(Gaming)_
 
 - Built and maintained game automation hooks for XDefiant, improving daily automated test execution reliability.
@@ -48,7 +48,7 @@ _Feb 2022 – April 2024 | Pune, India_
 ---
 
 ### Software Engineer | Quest Global
-_June 2020 – Feb 2022 | Thiruvananthapuram, India_
+_Jun 2020 – Feb 2022 | Thiruvananthapuram, India_
 **Project: ZAS WGT 200** _(Industrial Equipment Automation)_
 
 - Developed and maintained C++ and managed C++ DLLs for industrial automation equipment used at client sites.
