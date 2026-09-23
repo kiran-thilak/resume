@@ -74,6 +74,12 @@ _Mar 2018 – May 2020 | Thiruvananthapuram, India_
 
 ---
 
+## Certifications
+
+**Claude Certified Developer** | CCDV-F
+
+---
+
 ## Education
 
 **B.Tech in Computer Science and Engineering** | 71.4% | Aug 2017  
